@@ -221,7 +221,7 @@ app.post("/assign-students-to-mentor", async (req, res) => {
   }
 });
 
-const port = 5050;
+const port = process.env.PORT || 5050;
 
 app.listen(port, () => {
   console.log(`Server started in port ${port}`);
