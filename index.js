@@ -12,9 +12,7 @@ const res = require("express/lib/response");
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.json({
-    message: "Welcome",
-  });
+  res.send("Welcome");
 });
 
 //end-point to get all the mentors present
