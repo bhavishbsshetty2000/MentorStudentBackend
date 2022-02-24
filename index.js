@@ -4,7 +4,7 @@ const mongodb = require("mongodb");
 const mongoClient = mongodb.MongoClient;
 
 const dbUrl =
-  "mongodb+srv://Bhavish:Bhavish@cluster0.cntzd.mongodb.net/mentorStudent?retryWrites=true&w=majority";
+  "mongodb+srv://Bhavish:Bhavish@cluster0.cntzd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 app.use(express.json());
 
@@ -20,13 +20,9 @@ app.get("/", (req, res) => {
 app.get("/get-mentors", async (req, res) => {
   const client = await mongoClient.connect(dbUrl);
   try {
-    console.log("******************");
     const db = client.db("mentorStudent");
-    console.log("******************");
     const mentor = await db.collection("mentors").find().toArray();
-    console.log("******************");
     res.json(mentor);
-    console.log("******************");
   } catch (error) {
     console.log(error);
     res.json({
