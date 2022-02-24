@@ -4,7 +4,8 @@ const mongodb = require("mongodb");
 const mongoClient = mongodb.MongoClient;
 
 const dbUrl =
-  "mongodb+srv://Bhavish:Bhavish@cluster0.cntzd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "mongodb+srv://Bhavish:Bhavish@cluster0.cntzd.mongodb.net/mentorStudent?retryWrites=true&w=majority";
+
 app.use(express.json());
 
 const cors = require("cors");
